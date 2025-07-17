@@ -8,28 +8,25 @@ namespace DOTNET
 {
     internal class T1_11
     {
-        static void Main(string[] args)
+        public static void Main(String[] args)
         {
-            Console.Write("Enter Name: ");
+            Console.Write("Enter Name:");
             string name = Console.ReadLine();
+            Console.Write("Enter Gender (M/F):");
+            string gender = Console.ReadLine();
 
-            Console.Write("Enter Gender (M/F): ");
-            char gender = Convert.ToChar(Console.ReadLine().ToUpper()); 
-
-            if (gender == 'M')
+            if (gender == "M" || gender == "m")
             {
-                Console.WriteLine("Mr. " + name);
+                Console.WriteLine("Hello Mr." + name);
             }
-            else if (gender == 'F')
+            else if (gender == "F" || gender == "f")
             {
-                Console.WriteLine("Ms. " + name);
+                Console.WriteLine("Hello Ms." + name);
             }
             else
             {
-                Console.WriteLine("Invalid gender input. Please enter M or F.");
+                Console.WriteLine("Please Select Right Gender(M/F)");
             }
-
-            Console.Read();
         }
     }
 }

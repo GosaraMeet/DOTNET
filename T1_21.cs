@@ -8,33 +8,31 @@ namespace DOTNET
 {
     internal class T1_21
     {
-        static void Main(string[] args)
+        public static void Main(String[] args)
         {
-            Console.Write("Input the number of terms: ");
-            int n = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the number of terms : ");
+            int term = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Input number: ");
-            int num = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter number : ");
+            int no = Convert.ToInt32(Console.ReadLine());
 
+            int current = 0;
             int sum = 0;
-            int term = 0;
 
-            Console.Write("Series: ");
-
-            for (int i = 1; i <= n; i++)
+            for (int i = 1; i <= term; i++)
             {
-                term = term * 10 + num;  
-                sum += term;
+                current = current * 10 + no;
+                Console.Write(current);
 
-                Console.Write(term);
-
-                if (i < n)
+                if (i != term)
+                {
                     Console.Write(" + ");
+                }
+                sum += current;
             }
-
             Console.WriteLine();
-            Console.WriteLine("The Sum is : " + sum);
 
+            Console.WriteLine("The Sum is : {0}", sum);
             Console.Read();
         }
     }

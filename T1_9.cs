@@ -8,25 +8,23 @@ namespace DOTNET
 {
     internal class T1_9
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Enter Name:");
-            string name = Console.ReadLine();
+            Console.Write("Enter your name: ");
+            string input = Console.ReadLine();
+            string newinput = "";
 
-            StringBuilder toggleName = new StringBuilder();
-
-            foreach (char c in name)
+            foreach (char ch in input)
             {
-                if (char.IsUpper(c))
-                    toggleName.Append(char.ToLower(c));
-                else if (char.IsLower(c))
-                    toggleName.Append(char.ToUpper(c));
+                if (char.IsUpper(ch))
+                    newinput += char.ToLower(ch);
+                else if (char.IsLower(ch))
+                    newinput += char.ToUpper(ch);
                 else
-                    toggleName.Append(c);  
+                    newinput += ch;
             }
 
-            Console.WriteLine(toggleName.ToString());
-
+            Console.WriteLine("OUTPUT: " + newinput);
             Console.Read();
         }
     }

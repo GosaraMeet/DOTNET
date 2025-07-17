@@ -8,30 +8,25 @@ namespace DOTNET
 {
     internal class T1_20
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            int rows = 4;
-            int num = 1;
-
-            for (int i = 1; i <= rows; i++)
+            int k = 1;
+            int n = 4;
+            for (int i = 1; i <= n; i++)
             {
-                
-                for (int j = 1; j <= rows - i; j++)
+                for (int space = 1; space <= n - i; space++)
                 {
                     Console.Write(" ");
                 }
 
-                
-                for (int k = 1; k <= i; k++)
+                for (int j = 1; j <= i; j++)
                 {
-                    Console.Write(num + " ");
-                    num++;
+                    Console.Write(k + " ");
+                    k++;
                 }
-
                 Console.WriteLine();
             }
-
-            Console.Read();
         }
+
     }
 }

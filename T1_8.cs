@@ -10,14 +10,14 @@ namespace DOTNET
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter Name:");
+            Console.WriteLine("Enter a name:");
             string name = Console.ReadLine();
 
             string upperName = name.ToUpper();
 
-            Console.WriteLine(upperName);
+            Console.WriteLine("OUTPUT: " + upperName);
 
-            Console.Read();
+            Console.ReadLine();
         }
     }
 }

@@ -8,52 +8,64 @@ namespace DOTNET
 {
     internal class T1_14
     {
-        static void Main(string[] args)
+        public static void Main(String[] args)
         {
-            Console.Write("Enter a number: ");
-            string input = Console.ReadLine(); 
+            string[] s = new string[100];
+            int digit;
+            int index = 0;
 
-            foreach (char ch in input)
+            Console.Write("Enter the number : ");
+            int no = Convert.ToInt32(Console.ReadLine());
+
+            while (no != 0)
             {
-                switch (ch)
+                digit = no % 10;
+                switch (digit)
                 {
-                    case '0':
-                        Console.Write("Zero ");
+                    case 0:
+                        s[index++] = "Zero";
                         break;
-                    case '1':
-                        Console.Write("One ");
+                    case 1:
+                        s[index++] = "One";
                         break;
-                    case '2':
-                        Console.Write("Two ");
+                    case 2:
+                        s[index++] = "Two";
                         break;
-                    case '3':
-                        Console.Write("Three ");
+                    case 3:
+                        s[index++] = "Three";
                         break;
-                    case '4':
-                        Console.Write("Four ");
+                    case 4:
+                        s[index++] = "Four";
                         break;
-                    case '5':
-                        Console.Write("Five ");
+                    case 5:
+                        s[index++] = "Five";
                         break;
-                    case '6':
-                        Console.Write("Six ");
+                    case 6:
+                        s[index++] = "Six";
                         break;
-                    case '7':
-                        Console.Write("Seven ");
+                    case 7:
+                        s[index++] = "Seven";
                         break;
-                    case '8':
-                        Console.Write("Eight ");
+                    case 8:
+                        s[index++] = "Eight";
                         break;
-                    case '9':
-                        Console.Write("Nine ");
+                    case 9:
+                        s[index++] = "Nine";
                         break;
                     default:
-                        Console.Write("? "); 
+                        Console.WriteLine("Invalid");
                         break;
                 }
+                no = no / 10;
             }
 
-            Console.Read(); 
+
+            Console.Write("In words: ");
+            for (int i = index - 1; i >= 0; i--)
+            {
+                Console.Write(s[i] + " ");
+            }
+            Console.Read();
         }
     }
 }

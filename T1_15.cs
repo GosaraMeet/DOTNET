@@ -8,28 +8,29 @@ namespace DOTNET
 {
     internal class T1_15
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             Console.Write("Enter a number: ");
-            int num = Convert.ToInt32(Console.ReadLine());
+            int number = Convert.ToInt32(Console.ReadLine());
 
-            int originalNum = num;
+            int original = number;
             int sum = 0;
-            int digits = num.ToString().Length;
 
-            while (num > 0)
+            while (number > 0)
             {
-                int digit = num % 10;
-                sum += (int)Math.Pow(digit, digits);
-                num /= 10;
+                int digit = number % 10;
+                sum = sum + (digit * digit * digit);
+                number = number / 10;
             }
 
-            if (sum == originalNum)
-                Console.WriteLine(originalNum + " is an Armstrong number.");
+            if (sum == original)
+            {
+                Console.WriteLine(original + " is an Armstrong number.");
+            }
             else
-                Console.WriteLine(originalNum + " is not an Armstrong number.");
-
-            Console.Read();
+            {
+                Console.WriteLine(original + " is not an Armstrong number.");
+            }
         }
     }
 }

@@ -8,24 +8,18 @@ namespace DOTNET
 {
     internal class T1_13
     {
-        static void Main(string[] args)
+        public static void Main(String[] args)
         {
-            int a = 0, b = 1, c;
-
-            Console.Write(a + " " + b + " "); 
-
-            while (true)
+            int a = 0, b = 1, next;
+            Console.Write(a + " ");
+            Console.Write(b + " ");
+            for (int i = 0; i < 9; i++)
             {
-                c = a + b;
-                if (c > 55)
-                    break;
-
-                Console.Write(c + " ");
+                next = a + b;
+                Console.Write(next + " ");
                 a = b;
-                b = c;
+                b = next;
             }
-
-            Console.Read(); 
         }
     }
 }

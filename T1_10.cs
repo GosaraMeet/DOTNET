@@ -8,23 +8,15 @@ namespace DOTNET
 {
     internal class T1_10
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.Write("Enter Mobile Number: ");
+            Console.Write("Enter mobile number: ");
             string mobile = Console.ReadLine();
 
-            if (mobile.Length >= 5)
-            {
-                string firstPart = mobile.Substring(0, mobile.Length - 5); 
-                string masked = firstPart + "XXXXX"; 
-                Console.WriteLine("Masked Mobile Number: " + masked);
-            }
-            else
-            {
-                Console.WriteLine("Invalid mobile number. Must be at least 5 digits.");
-            }
+            string hide = mobile.Substring(0, 5) + "XXXXX";
 
-            Console.Read();
+            Console.WriteLine("Masked Mobile Number: " + hide);
         }
     }
+
 }
