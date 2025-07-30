@@ -27,7 +27,7 @@ namespace DOTNET
                 if (i != term)
                 {
                     Console.Write(" + ");
-                }
+                } 
                 sum += current;
             }
             Console.WriteLine();
